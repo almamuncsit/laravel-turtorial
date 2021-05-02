@@ -42,8 +42,8 @@ class User extends Authenticatable
     ];
 
 
-    public static function getTableName()
-{
-    return (new self())->getTable();
-}
+    public function purchases()
+    {
+        return $this->hasMany(Purchase::class);
+    }
 }
